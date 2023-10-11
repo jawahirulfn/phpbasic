@@ -7,8 +7,9 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
                     bindingCamera.imgView.setImageBitmap(pictureUri)
                     bindingCamera.imgView.visibility = View.VISIBLE
                     bindingCamera.videoView.visibility = View.GONE
+                    
 
-                    // Mengirim foto menggunakan OkHttp
+                    //Mengirim foto menggunakan OkHttp
                     val requestBody = MultipartBody.Builder()
                         .setType(MultipartBody.FORM)
                         .addFormDataPart(
